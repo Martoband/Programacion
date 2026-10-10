@@ -71,6 +71,36 @@ public class Main {
         encanto.datosCine();
         System.out.println("Total de las entradas: "+ (toyStory.precio+encanto.precio));
 */
+/*     JUGADOR
+    Jugador alex = new Jugador("Alex");
+    Jugador dani = new Jugador("Dani",3);
+    Jugador cris = new Jugador("Cris",5,200);
+        System.out.print("Jugador 1: ");
+        alex.estado();
+        System.out.print("Jugador 2: ");
+        dani.estado();
+        System.out.print("Jugador 3: ");
+        cris.estado();
+
+        alex.puntuacion+=50;
+
+        System.out.println("\n\nPuntuaciones después del cambio\n");
+        System.out.print("Jugador 1: ");
+        alex.estado();
+        System.out.print("Jugador 2: ");
+        dani.estado();
+        System.out.print("Jugador 3: ");
+        cris.estado();*/
+
+   Movil samsung = new Movil("Samsung","Galaxy A15");
+   Movil xiaomi = new Movil("Xiaomi","Redmi Note 13", 128);
+   Movil apple = new Movil("Apple","iPhone 15", 256, true);
+        System.out.print("Móvil 1: ");
+        samsung.estado();
+        System.out.print("Móvil 2: ");
+        xiaomi.estado();
+        System.out.print("Móvil 3: ");
+        apple.estado();
 
 
     }
