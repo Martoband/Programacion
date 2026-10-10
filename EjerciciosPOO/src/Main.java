@@ -33,20 +33,20 @@ public class Main {
     Coche toyota = new Coche("Toyota","Corolla");
     Coche seat =new Coche ("Seat","Ibiza",2020);
 
-        System.out.printf("Coche 1: ");
+        System.out.print("Coche 1: ");
         sn.muestraCoche();
-        System.out.printf("Coche 2: ");
+        System.out.print("Coche 2: ");
         toyota.muestraCoche();
-        System.out.printf("Coche 3: ");
+        System.out.print("Coche 3: ");
         seat.muestraCoche();
 
 
 
    Estudiante alexis = new Estudiante("Alex","1º DAM");
    Estudiante sara = new Estudiante("Sara","1º DAM",true);
-        System.out.printf("Estudiante 1: ");
+        System.out.print("Estudiante 1: ");
         alexis.estadoMatricula();
-        System.out.printf("Estudiante 2: ");
+        System.out.print("Estudiante 2: ");
         sara.estadoMatricula();
 
 
@@ -54,10 +54,10 @@ public class Main {
   Rectangulo r1 = new Rectangulo(5.0,3.0);
   Rectangulo c1 = new Rectangulo(4);
 
-        System.out.printf("Rectángulo: ");
+        System.out.print("Rectángulo: ");
         r1.medidas();
         System.out.println("Área del rectángulo: " + r1.base*r1.altura);
-        System.out.printf("Cuadrado: ");
+        System.out.print("Cuadrado: ");
         c1.medidas();
         System.out.println("Área del cuadrado: " + c1.base*c1.altura);
 
@@ -65,9 +65,9 @@ public class Main {
 
     EntradaCine toyStory = new EntradaCine("Toy Story");
     EntradaCine encanto = new EntradaCine("Encanto",3,8.5);
-        System.out.printf("Entrada 1: ");
+        System.out.print("Entrada 1: ");
         toyStory.datosCine();
-        System.out.printf("Entrada 2: ");
+        System.out.print("Entrada 2: ");
         encanto.datosCine();
         System.out.println("Total de las entradas: "+ (toyStory.precio+encanto.precio));
 
