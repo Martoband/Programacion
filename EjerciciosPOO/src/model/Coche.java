@@ -20,7 +20,23 @@ public class Coche {
         this.modelo=modelo;
         this.anio=anio;
     }
-    public void muestraCoche(){
-        System.out.printf("%s - %s - %d \n",marca, modelo, anio);
+    public String getMarca(){
+        return this.marca;
     }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+
+
+
+    /* public void muestraCoche(){
+        System.out.printf("%s - %s - %d \n",marca, modelo, anio);
+    }*/
 }
+

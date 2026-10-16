@@ -1,9 +1,21 @@
 import model.*;
-
+import view.*;
 public class Main {
     public static void main (String[] args) {
 
+        Coche sn = new Coche();
+        Coche toyota = new Coche("Toyota","Corolla");
+        Coche seat =new Coche ("Seat","Ibiza",2020);
+        Vista vista = new Vista();
 
+        System.out.print("Coche 1: ");
+        vista.muestraCoche(sn);
+        System.out.print("Coche 2: ");
+        vista.muestraCoche(toyota);
+        System.out.print("Coche 3: ");
+        vista.muestraCoche(seat);
+
+/*
         Persona ana = new Persona ("Ana",20);
         ana.saludar();
 
@@ -26,22 +38,11 @@ public class Main {
         cuaderno.datos();
         mochila.datos();
 
+*/
 
 
 
-    Coche sn = new Coche();
-    Coche toyota = new Coche("Toyota","Corolla");
-    Coche seat =new Coche ("Seat","Ibiza",2020);
-
-        System.out.print("Coche 1: ");
-        sn.muestraCoche();
-        System.out.print("Coche 2: ");
-        toyota.muestraCoche();
-        System.out.print("Coche 3: ");
-        seat.muestraCoche();
-
-
-
+/*
    Estudiante alexis = new Estudiante("Alex","1º DAM");
    Estudiante sara = new Estudiante("Sara","1º DAM",true);
         System.out.print("Estudiante 1: ");
@@ -101,7 +102,7 @@ public class Main {
         xiaomi.estado();
         System.out.print("Móvil 3: ");
         apple.estado();
-
+*/
 
     }
 }
