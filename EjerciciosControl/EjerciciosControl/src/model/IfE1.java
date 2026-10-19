@@ -8,6 +8,7 @@ public class IfE1 {
         int edad ;
         System.out.println("Introduce tu edad: ");
         edad = entrada.nextInt();
+        entrada.close();
         if (edad>=18){
             System.out.println("Eres mayor de edad. puedes votar.");
         }
