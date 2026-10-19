@@ -33,7 +33,7 @@ public class IfE11 {
             System.out.println("Pa lo que has gastao, haberte quedao en casa");
         }
 
-        System.out.println("");
+
 
     }
 }
