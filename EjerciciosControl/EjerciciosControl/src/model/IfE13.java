@@ -1,5 +1,6 @@
+//Este lo he hecho fuera de IntelliJ, así que igual tiene algun fallo de escritura
 public class IfE13{
-// import util.java.Scanner
+import java.util.Scanner;
 public static void main (String[] args){
 
 Scanner sc = new Scanner (System.in);
@@ -9,6 +10,7 @@ double precio;
 boolean menores;
 boolean adolescentes;
 boolean adultos;
+boolean esDia;
 
 System.out.println("Introduce tu edad");
 edad = sc.nextInt();
@@ -28,14 +30,26 @@ Sustem.out.printf("Día de la semana: (%d) - %s ",dia, diaString);
 menores = edad<12;
 adolescentes = edad>12 && edad<17;
 adultos = edad>18 && edad<64
+esDia = dia==2 || dia==4;
 System.out.println("¿Eres menor de 12 años?" +menores);
 if(menores){
 precio=0}
 else if(adolescentes){
-	if(dia==2){precio=0;}
+	System.out.println("¿Tienes entre 12 y 17 años?" +adolescentes);
+	if(esDia){
+		System.out.println("¿Es martes?" +esDia);
+		precio=0;
+			  }else{
+		System.out.println("¿Es martes?" +esDia);
+			  }
 	precio=5;}
 else if(adultos){
-	if(dia==4){precio=7;}
+	System.out.println("¿Tienes entre 18 y 64 años?" +adultos);
+	if(esDia){
+		System.out.println("¿Es jueves?" +esDia);
+		precio=7;}else{
+		System.out.println("¿Es jueves?" +esDia);
+		}
 	precio=10;}
 else{
 precio=6;
