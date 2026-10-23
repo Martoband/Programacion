@@ -9,12 +9,14 @@ public class E9 {
         System.out.println("Introduce un numero");
         num = sc.nextInt();
         int resultado=1;
-        for(int i=0;i<=num+1;i++){
-            resultado=resultado*(num*(num-1));
-
-            System.out.println("vuelta "+i);
-            System.out.println(resultado);
-            num-=2;
+        for(int i=num;i>0;i--){
+            if (num!=i){System.out.printf("%d*%d ",resultado, i);
+                resultado=i*resultado;
+                System.out.printf(" = %d%n",resultado);
+            }else{
+                resultado=i*resultado;
+               // System.out.printf("%d%n",resultado);
+            }
 
         }
     }
