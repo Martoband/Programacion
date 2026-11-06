@@ -11,6 +11,7 @@ CuentaBancaria c4 = new CuentaBancaria("Pedro Martinez", 5000);
 CuentaBancaria c5 = new CuentaBancaria("Roberto Hernandez", 5000);
         Vista vista = new Vista();
 Controller banco = new Controller(vista);
+CuentaBancaria[] aray = new CuentaBancaria[]{c1,c2,c3,c4,c5};
 /*
 banco.consultaSaldo(c1);
 banco.transferenciaSaldo(c2,3000,c3);
