@@ -14,6 +14,7 @@ public class E2 {
                    System.out.println(num[usuario]);
                    noExiste = false;
                } catch (ArrayIndexOutOfBoundsException e) {
+                   System.out.println(e.getMessage());//mensaje PREDEFINIDO de ArrayIndexOutOfBoundsException
                    System.out.println("La posicion está fuera del array. Recuuerda que solo tiene 5 elementos");
                    noExiste = true;
                }
