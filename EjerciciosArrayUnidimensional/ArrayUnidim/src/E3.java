@@ -1,30 +1,27 @@
 import java.util.Scanner;
-//TODO AQUI ESTÁN LOS EJERCICIOS DESDE EL 2 HASTA 8, pero sin String
+
+//TODO AQUI ESTÁN LOS EJERCICIOS DESDE EL 2 HASTA 9, pero sin String
 public class E3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int mayorPrimero = 0;
-        int mayorSegundo = 0;
-        int vecesEncontradoPrimero = 0;
-        int vecesEntontradoSegundo = 0;
-        int menorPrimero = Integer.MAX_VALUE;
-        int menorSegundo = Integer.MAX_VALUE;
-        int contador1 = 1;
-        int vuelta1 = 0;
-        int vuelta2 = 0;
-        int contador2 = 1;
-        int cont50Array1 = 0;
-        int cont50Array2 = 0;
-        double suma1 = 0;
-        double suma2 = 0;
-        boolean primeroEncuentra = false;
-        boolean segundoEncuentra = false;
-        System.out.println("De cuantos numeros quieres tu primer array?");
-        int x = sc.nextInt();
+        int mayorPrimero = 0,mayorSegundo =0,vecesEncontradoPrimero =0 ,vecesEntontradoSegundo=0 , cont50Array1=0,cont50Array2=0,vuelta1=0,vuelta2=0,j = 0;
+        int menorPrimero=Integer.MAX_VALUE, menorSegundo = Integer.MAX_VALUE;
+        int contador1=1, contador2 = 1;
+        double suma1=0, suma2 = 0;
+        boolean primeroEncuentra=false, segundoEncuentra = false;
+        int x, y;
+        do {
+            System.out.println("De cuantos numeros quieres tu primer array?");
+            x = sc.nextInt();
+        } while (x <= 0);
         int[] primero = new int[x];
-        System.out.println("De cuantos numeros quieres el segundo array?");
-        int y = sc.nextInt();
+        int[] invertido = new int[x];
+        do {
+            System.out.println("De cuantos numeros quieres el segundo array?");
+            y = sc.nextInt();
+        } while (y <= 0);
         int[] segundo = new int[y];
+        int[] invertidoSegundo = new int[y];
         for (int i = 0; i < Math.min(x, y); i++) {
             System.out.println("Dime la " + (i + 1) + "ª posición del primer array");
             primero[i] = sc.nextInt();
@@ -73,7 +70,13 @@ public class E3 {
         }
         System.out.println("Introduce el numero a buscar");
         int buscar = sc.nextInt();
+        for (int i = invertidoSegundo.length; i > 0 ; i--) {
+            invertidoSegundo[i-1]=segundo[j];
+            j++;
+
+        }
         for (int numero : primero) {
+            invertido[x - contador1] = numero;
             if (numero > 50) {
                 cont50Array1 += 1;
             }
@@ -104,12 +107,12 @@ public class E3 {
         }
 
         if (primeroEncuentra) {
-            System.out.printf("El numero %d se ha encontrado en el primer array en la posicion %d la primera vez, y se ha encontrado %d veces%n",buscar,vuelta1,vecesEncontradoPrimero);
+            System.out.printf("El numero %d se ha encontrado en el primer array en la posicion %d la primera vez, y se ha encontrado %d veces%n", buscar, vuelta1, vecesEncontradoPrimero);
         } else {
             System.out.println("El numero " + buscar + " no se encuentra en el primer array");
         }
         if (segundoEncuentra) {
-            System.out.printf("El numero %d se ha encontrado en el segundo array en la posicion %d la primera vez, y se ha encontrado %d veces%n",buscar,vuelta2,vecesEntontradoSegundo);
+            System.out.printf("El numero %d se ha encontrado en el segundo array en la posicion %d la primera vez, y se ha encontrado %d veces%n", buscar, vuelta2, vecesEntontradoSegundo);
         } else {
             System.out.println("El numero " + buscar + "no se encuentra en el segundo array");
         }
@@ -123,7 +126,12 @@ public class E3 {
         System.out.println("El mayor numero del segundo array es " + mayorSegundo);
         System.out.println("El menor numero del primer array es " + menorPrimero);
         System.out.println("El menor numero del segundo array es " + menorSegundo);
-
+        for (int numero : invertido) {
+            System.out.println(numero);
+        }
+        for(int numero :invertidoSegundo){
+            System.out.println(numero);
+        }
     }
 
 
