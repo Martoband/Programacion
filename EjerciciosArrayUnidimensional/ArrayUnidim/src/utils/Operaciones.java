@@ -35,21 +35,46 @@ public class Operaciones {
         }
     }
 
+    public void sortParAscendente() {
+        for (int i = 0; i < numeros.length; i++) {
+
+                    int aux;
+                    intercambio = false;
+                    for (int j = 0; j < numeros.length - 1 - i; j++) {
+                        if ((numeros[j] % 2 != 0 && numeros[j+1] % 2 == 0)||(numeros[j] > numeros[j+1] &&
+                                numeros[j] % 2 == 0 &&
+                                numeros[j+1] % 2 == 0)||(numeros[j] > numeros[j+1] &&
+                                numeros[j] % 2 != 0 &&
+                                numeros[j+1] % 2 != 0)) {
+                            aux = numeros[j];
+                            numeros[j] = numeros[j + 1];
+                            numeros[j + 1] = aux;
+                            intercambio = true;
+                        }
+                    }
+                    if (!intercambio) {
+                        break;
+                    }
+
+                }
+            }
+
+
+
     public void bubbleMayor() {
         for (int i = 0; i < numeros.length; i++) {
             int aux;
+            intercambio = false;
             for (int j = 0; j < numeros.length - 1 - i; j++) {
                 if (numeros[j] > numeros[j + 1]) {
                     aux = numeros[j];
                     numeros[j] = numeros[j + 1];
                     numeros[j + 1] = aux;
                     intercambio = true;
-                    if (!intercambio) {
-                        break;
-                    }
                 }
-
-
+            }
+            if (!intercambio) {
+                break;
             }
         }
     }
@@ -57,16 +82,18 @@ public class Operaciones {
     public void bubbleMenor() {
         for (int i = 0; i < numeros.length; i++) {
             int aux;
+            intercambio = false;
             for (int j = 0; j < numeros.length - 1 - i; j++) {
                 if (numeros[j] < numeros[j + 1]) {
                     aux = numeros[j];
                     numeros[j] = numeros[j + 1];
                     numeros[j + 1] = aux;
                     intercambio = true;
-                    if (!intercambio) {
-                        break;
-                    }
                 }
+
+            }
+            if (!intercambio) {
+                break;
             }
         }
     }
@@ -107,13 +134,15 @@ public class Operaciones {
     public void ordenar() {
         Arrays.sort(numeros);
     }
-public void rotarDcha(){
-        int aux = numeros[numeros.length-1];
-    for (int i = numeros.length-2; i >= 0 ; i--) {
-        numeros[i+1]=numeros[i];
+
+    public void rotarDcha() {
+        int aux = numeros[numeros.length - 1];
+        for (int i = numeros.length - 2; i >= 0; i--) {
+            numeros[i + 1] = numeros[i];
+        }
+        numeros[0] = aux;
     }
-    numeros[0]=aux;
-}
+
     public void rotarIzq() {
         int aux = numeros[0];
         for (int i = 0; i < numeros.length - 1; i++) {
