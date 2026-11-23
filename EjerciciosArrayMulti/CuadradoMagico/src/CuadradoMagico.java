@@ -22,7 +22,7 @@ public class CuadradoMagico {
         }
     }
 
-    //TODO, repasar las exception para que lance exception si no son iguales los cuadrados
+
     public void setCuadrado(int row, int col) throws DiferenteExteption {
         if (row != col) {
             throw new DiferenteExteption("Para ser cuadrado, las filas y las columnas deben ser iguales");
@@ -36,7 +36,7 @@ public class CuadradoMagico {
     public void rellenarCuadrado() {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                cuadrado[i][j] = (int) (Math.random() * Math.pow(row, 2.0));
+                cuadrado[i][j] = (int) (Math.random() * 2); //Math.pow(row, 2.0));  // CON EL Math.Pow, No es capaz de conseguir cuadrado magico para row>3
             }
         }
     }
@@ -68,10 +68,10 @@ public class CuadradoMagico {
                 sumaDiag2+=cuadrado[i][row-i-1];
             }
             if(sumaDiag1==referencia && sumaDiag2==referencia){
-                System.out.println("true");
+               // System.out.println("true");
                 return true;
             }else{
-                System.out.println("false");
+               // System.out.println("false");
                 return false;
     }}
 
